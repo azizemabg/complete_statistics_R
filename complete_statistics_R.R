@@ -265,6 +265,121 @@ X
 # Standardization does not affect logistic regression, 
 # decision tree and other ensemble techniques such as random forest and gradient boosting.
 
+# Linear Regression in R ####
+# Assumption of linear regression
+# How to treat when assumptions is not met
+# Fitting the model
+# Calculating model performance
+# 
+
+# Linear regression is method for finding relationship between single, continuous
+# variable called dependent or target variable and one or more other variable
+# (Continuous or not) called independent variables. 
+# X axis is called independent
+# Y axis is called dependent 
+# The straight line curve that fit the observed data is called regression line
+# or best-fitting straight line. The distance between dots and regression line is called errors
+# Linear regression is aiming at finding best fitting straight line by minimizing
+# the sum of squared vertical distance between dots and regression line. 
+
+# Variable type
+# Linear regression requires the dependent variable to be continuous; numeric value (no categories or group; ==> logistic regression)
+#
+
+# Simple bs multiple linear regression
+# linear regression can be simple linear regression when you have onlz one indenpendent variable
+# If you hvae more than one independent variable, it called multiple linear regression
+
+# Regression equation
+# Y = b0 + b1x1 + b2x2 + b3x3 + ............ + bkXk
+# b0 is the intercept the expected mean value of dependent variable (Y) when 
+# all independent variable (Xs) are equal to 0. 
+# b1 is slope. b1 represents the amount by which dependent variable (Y) changes if 
+# we change X1 by one unit keeping other variable constant. 
+
+# Residual
+# The difference between observed (actual) value of dependent variable and the value
+# of the dependent variable predicted from the regression line. 
+
+# Algorithm 
+# Linear regression is based on least squares estimation which says regression coefficient
+# (estimates) should be chosen in such a way that it minimize the sum of the squared distances of 
+# each observed response to its fitted value. 
+
+# Minimum sample size
+# linear regression requires 5 cases per independent variable in the analysis. 
+
+# Assumption of linear regression analysis
+# 1. Linear relationship
+# Need linear relationship between dependent and independent variables
+# 2. Normality of residual
+# linear regression requires residual should be normally distributed
+# 3. Homoscedasticity 
+# Residuals are approximately equal for all predicted dependent variable values. 
+# It means constant variance of errors. 
+# 4. No outlier problem
+# 5. Multicolinearity 
+# There is high correlation between independent variables. 
+# Linear regression model must not be faced with the problem of multicolinearity
+# 6. Independence of errors terms - NO Autocorrelation
+# it states that the errors associated with one observation are not correlated
+# with the errors of any other observation. it is a problem when you use time 
+# series data. 
+
+# Distribution of linear regression
+# linear regression assumes target or dependent variable to be normally distributed
+# Normal distribution is same as gaussian distribution. 
+
+# Standardized coefficients (Estimates)
+# The concept of standardization or standardized coefficients (aka estimates) 
+# comes into picture when predictors (aka independent variables) are expressed in different units. 
+# Suppose you have 3 independent variables - age, height and weight.
+# The variable 'age' is expressed in years, height in cm, weight in kg. 
+# If we need to rank these predictors based on the unstandardized coefficient, 
+# it would not be a fair comparison as the unit of these variable is not same.
+
+# Standardized Coefficients (or Estimates) are mainly used to rank predictors 
+# (or independent or explanatory variables) as it eliminate the units of measurement of  independent and dependent variables). 
+# We can rank independent variables with absolute value of standardized coefficients. 
+# The most important variable will have maximum absolute value of standardized coefficient.
+
+# Interpretation of Standardized Coefficient
+# A standardized coefficient value of 1.25 indicates that a change of one 
+# standard deviation in the independent variable results in a 1.25 
+# standard deviations increase in the dependent variable.
+
+# Standardize vs unstandardized coefficient
+# Measure model performance
+# 1. R-Squared
+# It measures the proportion of the variation in your dependent variable explained
+# by all of your independent variable in the model. It assumes that every independent
+# in the model helps to explain variation in the dependent variable. 
+# in reality some variables do not affect dependent variable and they do not help building a good model
+# r2
+# r^2 = 1 - ((SS error)/(SS total))
+# SS error = (yi - y^)2
+# SS total = (yi - y_mean)
+# SS regression = yi^ 
+# Higher R-squared, the better the model fits your data. 
+
+# Can R-squared be negative
+# Yes, it is when horizontal line explains the data better than model. it mostly
+# happens when you do not include the intercept. Without an intercept
+# The regression could do worse than the sample mean in terms of predicting
+# the target variable. 
+
+# Adjusted R-Squared
+# It measures the proportion of variation explained by only those independent
+# variables that really affect the dependent variable. 
+# it penalies you for adding independent variable that do not affect the 
+# dependent variable
+
+# Adjusted-R Squared is more important metrics than R-Squared
+# Every time you add a independent variable to model, the R-Squared increases
+# even if the independent variable is insignificant, it never declines. 
+# Whereas adjusted R squared increase only when independent variable is significant
+# and affect the dependent variable
+
 
 
 
